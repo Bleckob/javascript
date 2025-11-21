@@ -1,0 +1,36 @@
+.carousel{
+    width: 700px;
+    height: 250px;
+    position: relative;
+    margin: 20% 0px 0px 20%;
+}
+
+img{
+    position: absolute;
+    left: 11%;
+    width: 80%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+
+button{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 8px 12px;
+    cursor: pointer;
+    background: black;
+    color: white;
+    border: none;
+}
+
+button:hover{
+    background-color: grey;
+    color: black;
+}
+
+#nextBtn{
+    right: 10px;
+}
+
