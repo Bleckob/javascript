@@ -21,21 +21,34 @@ const images = ["./images/01.jpg",
 ];
 
 let index = 0;
-const carouselImg = document.getElementById("carouselImage");
+const leftImg = document.getElementById("left");
+const activeImg = document.getElementById("active");
+const rightImg = document.getElementById("right");
 const nextBtn = document.getElementById("nextBtn");
 const prevBtn = document.getElementById("prevBtn");
 
+function updateImg(){
+    const leftIndex = (index - 1 + images.length) % images.length;
+    const rightIndex = (index + 1) % images.length;
+
+    leftImg.src = images[leftIndex];
+    activeImg.src = images[index];
+    rightImg.src = images[rightIndex];
+}
+
+updateImg();
+
 nextBtn.addEventListener("click", () => {
     index = (index + 1) % images.length;
-    carouselImg.src = images[index]
+    updateImg();
 });
 
 prevBtn.addEventListener("click", () => {
     index = (index - 1 + images.length) % images.length;
-    carouselImg.src = images[index]; 
+    updateImg();
 });
 
 setInterval(() => {
     index = (index + 1) % images.length;
-    carouselImg.src = images[index];
+    updateImg();
 }, 5000);

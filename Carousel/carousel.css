@@ -1,36 +1,77 @@
-.carousel{
-    width: 700px;
-    height: 250px;
+body{
+    background-image: url(./images/bg.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.carousel-bar{
     position: relative;
-    margin: 20% 0px 0px 20%;
+    width: fit-content;
+    height: fit-content;
+    background-color: white;
+    border-radius: 30px;
+    padding: 5% 2%;
+    margin-top: 12%;
+    margin-left: 15%;
+}
+
+.carousel{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.images-bar{
+    width: 900px;
+    height: 300px;
+    display: flex;
+    align-items: center;
 }
 
 img{
-    position: absolute;
-    left: 11%;
-    width: 80%;
+    width: 60%;
     height: 100%;
     object-fit: cover;
-    
+    border-radius: 30px;
+    opacity: 0.6;
+    transition: 0.6s ease-in-out;
+}
+
+
+#active{
+    position: absolute;
+    left: 20%;
+    opacity: 1;
+    z-index: 3;
+}
+
+#left{
+    height: 70%;
+}
+
+#right{
+    height: 70%;
 }
 
 button{
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    padding: 8px 12px;
+    padding: 12px 15px;
+    width: 10%;
     cursor: pointer;
-    background: black;
+    background: #00002a;
+    height: fit-content;
     color: white;
     border: none;
+    border-radius: 20px;
 }
 
 button:hover{
-    background-color: grey;
-    color: black;
+    border: 1px solid #00002a;
+    color: #00002a;
+    background: white;
 }
 
 #nextBtn{
     right: 10px;
 }
-
